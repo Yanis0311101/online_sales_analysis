@@ -2,16 +2,25 @@
 
 from product import Product
 from product_manager import ProductManager
-
-
+from cart import Cart
 
 manager = ProductManager()
 
 
-manager.add_product(Product("Laptop", 3500, 10))
-manager.add_product(Product("Mouse", 100, 50))
-manager.add_product(Product("Monitor", 800, 20))
+product1 = Product("Laptop", 3500, 5)
+product2 = Product("Telefon", 1500, 10)
+product3 = Product("Căști", 300, 15)
+
+manager.add_product(product1)
+manager.add_product(product2)
+manager.add_product(product3)
+
+cart = Cart()
 
 
-manager.display_all_products()
-manager.total_inventory_value()
+cart.add_to_cart(product1)
+cart.add_to_cart(product2)
+
+
+cart.display_cart()
+print(f"Total de plată: {cart.total_value()} RON")
