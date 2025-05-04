@@ -1,7 +1,8 @@
 
 
-from src.product import Product
-from src.product_manager import ProductManager
+from product import Product
+from product_manager import ProductManager
+
 
 
 manager = ProductManager()

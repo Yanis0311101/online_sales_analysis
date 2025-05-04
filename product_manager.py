@@ -1,5 +1,6 @@
 
-from src.product import Product
+from product import Product
+
 
 class ProductManager:
     def __init__(self):
@@ -17,3 +18,6 @@ class ProductManager:
         total = sum(p.price * p.quantity for p in self.products)
         print(f"Valoarea totală a inventarului: {total} RON")
         return total
+    
+def remove_product(self, name):
+    self.products = [product for product in self.products if product.name != name]
