@@ -4,12 +4,13 @@ class Cart:
     def __init__(self):
         self.cart_items = []
 
-    def add_to_cart(self, product):
+    def add_product(self, product):
         self.cart_items.append(product)
 
-    def total_value(self):
+    def calculate_total(self):
         return sum(item.price * item.quantity for item in self.cart_items)
 
     def display_cart(self):
-        for product in self.cart_items:
-            print(f"{product.name} - {product.quantity} x {product.price} = {product.price * product.quantity}")
+        for item in self.cart_items:
+            print(f"{item.name} - {item.quantity} x {item.price} RON")
+        print(f"Total: {self.calculate_total()} RON")
